@@ -1,11 +1,13 @@
+// Importar el módulo readline para interactuar con el usuario en la línea de comandos
 const readline = require('readline');
 
+// Crear una interfaz de lectura y escritura
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-// Definición de la clase ProductManager para gestionar productos
+// Definir la clase ProductManager para gestionar productos
 class ProductManager {
   constructor() {
     this.products = [];
@@ -59,7 +61,8 @@ class ProductManager {
   }
 }
 
-const productManager = new ProductManager(); // Crear una instancia de la clase ProductManager
+// Crear una instancia de la clase ProductManager
+const productManager = new ProductManager();
 
 // Función utilitaria para hacer preguntas al usuario y obtener respuestas como promesas
 function askQuestion(question) {
