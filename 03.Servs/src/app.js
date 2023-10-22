@@ -36,7 +36,7 @@ parámetro pid, se ejecuta el bloque de código proporcionado*/
 app.get('/products/:pid', async (req, res) => {
     /*Aquí se extrae el valor del parámetro pid de la solicitud. */
   const { pid } = req.params;
-  try {1
+  try {
     const product = await productManager.getProductById(pid);
     /*Devuelve el producto correspondiente al pid proporcionado en la solicitud */
     res.json(product);
