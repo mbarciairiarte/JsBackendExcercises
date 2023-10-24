@@ -56,7 +56,7 @@ app.get('/products/:pid', async (req, res) => {
 
 
 app.post('/carts', (req, res) => {
-    const newCart = cartManager.addCart(); // Asumiendo que tienes un método addCart() en tu CartManager para agregar un nuevo carrito
+    const newCart = cartManager.addCart(); // método addCart() de CartManager para agregar un nuevo carrito
     console.log('Nuevo carrito creado:', newCart);
     res.json(newCart); // Devuelve el nuevo carrito como respuesta a la solicitud
   });
@@ -93,7 +93,7 @@ app.post('/carts/:cartId/products/:productId', (req, res) => {
 
 
 
-/*quí se inicia el servidor Express en el puerto especificado y se imprime un mensaje en la consola indicando que 
+/*Aquí se inicia el servidor Express en el puerto especificado y se imprime un mensaje en la consola indicando que 
 el servidor está en funcionamiento */
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
