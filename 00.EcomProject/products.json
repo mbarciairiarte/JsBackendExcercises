@@ -1,0 +1,38 @@
+[
+  {
+    "id": "a1l3ywj86e8snk2pmgljre",
+    "title": "a",
+    "description": "a",
+    "price": 12,
+    "thumbnail": "a",
+    "code": "1",
+    "stock": 1
+  },
+  {
+    "id": "8phzicam4w4wy8e9vyatr",
+    "title": "a",
+    "description": "c",
+    "price": 76,
+    "thumbnail": "3",
+    "code": "2",
+    "stock": 1
+  },
+  {
+    "id": "43dg9nosfbh4tays2wsrax",
+    "title": "y",
+    "description": "y",
+    "price": 5,
+    "thumbnail": "y",
+    "code": "5",
+    "stock": 5
+  },
+  {
+    "id": "31ogi13wmz8gvk409faakb",
+    "title": "u",
+    "description": "u",
+    "price": 7,
+    "thumbnail": "u",
+    "code": "u",
+    "stock": 7
+  }
+]
