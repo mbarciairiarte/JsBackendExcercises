@@ -9,12 +9,18 @@ export class ProductManager {
     try {
       if (fs.existsSync(this.path)) {
         const productsJSON = await fs.promises.readFile(this.path, "utf-8");
-        return JSON.parse(productsJSON);
-      } else return [];
+        const products = JSON.parse(productsJSON);
+        return products;
+      } else {
+        console.log(`El archivo en la ruta ${this.path} no existe.`);
+        return [];
+      }
     } catch (error) {
-      console.log(error);
+      console.error(`Error al leer el archivo en la ruta ${this.path}: ${error}`);
+      throw new Error(`Error al leer el archivo en la ruta ${this.path}: ${error}`);
     }
   }
+  
 
   async getProductsByLimit(limit){
     try {
@@ -55,10 +61,16 @@ export class ProductManager {
     try {
       const products = await this.getProducts();
       console.log('Product list:', products); // Imprimir la lista de productos cargada
-      const prod = products.find(p => p.id === id);
       console.log('Requested product ID:', id); // Imprimir el ID del producto solicitado
-      if (!prod) return false;
-      return prod;
+  
+      const prod = products.find(p => p.id === id);
+      if (!prod) {
+        console.log(`Product with ID ${id} not found.`);
+        return false;
+      } else {
+        console.log(`Product with ID ${id} found:`, prod);
+        return prod;
+      }
     } catch (error) {
       console.log(error);
       throw new Error('Error al obtener el producto por su ID.');
